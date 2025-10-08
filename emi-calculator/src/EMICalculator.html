@@ -1,0 +1,151 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EMI Calculator - Full Width</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #c8d8ff, #e3e8ff);
+      display: flex;
+      justify-content: center;   /* centers horizontally */
+      align-items: center;       /* centers vertically */
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1000px;    /* center content nicely on laptop */
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .calculator-container {
+      flex: 1;
+      max-width: 450px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #3d2df3;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #4b3cf6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #352acb;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      display: none;
+    }
+
+    /* Optional - make responsive for mobile */
+    @media (max-width: 600px) {
+      .wrapper {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .calculator-container {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="calculator-container">
+      <h2>💰 EMI Calculator</h2>
+
+      <div class="input-group">
+        <label for="loanAmount">Loan Amount</label>
+        <input type="number" id="loanAmount" placeholder="Enter loan amount">
+      </div>
+
+      <div class="input-group">
+        <label for="interestRate">Annual Interest Rate (%)</label>
+        <input type="number" id="interestRate" placeholder="Enter annual interest rate">
+      </div>
+
+      <div class="input-group">
+        <label for="loanTenure">Loan Tenure (in months)</label>
+        <input type="number" id="loanTenure" placeholder="Enter loan tenure">
+      </div>
+
+      <button class="btn" onclick="calculateEMI()">Calculate EMI</button>
+
+      <div class="result" id="resultBox"></div>
+    </div>
+  </div>
+
+  <script>
+    function calculateEMI() {
+      const P = parseFloat(document.getElementById('loanAmount').value);
+      const annualRate = parseFloat(document.getElementById('interestRate').value);
+      const n = parseFloat(document.getElementById('loanTenure').value);
+
+      if (!P || !annualRate || !n) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      const r = (annualRate / 12) / 100;
+      const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      const resultBox = document.getElementById('resultBox');
+      resultBox.style.display = "block";
+      resultBox.textContent = `Monthly EMI: ₹${emi.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html> -->
+
